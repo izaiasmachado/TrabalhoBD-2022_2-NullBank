@@ -53,12 +53,14 @@ Se algum membro não esteja presente na apresentação de sua equipe, o mesmo fi
 
 # Entregáveis
 
-## Entrega da Modelagem (27/11/2022)
+Todos os arquivos deverão ficar em um arquivo Zipado (.zip) na pasta raíz do repositório Git, com nome no padrão: `Trabalho Final - BD 2022.2 - Alunos: <nomes>`", onde `<nomes>` indica os nomes dos alunos membros da equipe.
+
+## Entrega da Modelagem
 
 - [ ] Modelagem do BD (.mwb)
 - [ ] Scripts de criação e povoamento do BD (.sql)
 
-## Entrega Final (04/12/2022)
+## Entrega Final
 
 ### 1. Código-fonte
 
