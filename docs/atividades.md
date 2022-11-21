@@ -7,7 +7,7 @@
 | Status | Data limite | Atividade            |
 | :----: | ----------- | -------------------- |
 |   ✅   | 14/11/2022  | Formação das Equipes |
-|   ❗   | 21/11/2022  | 1º Commit            |
+|   ✅   | 21/11/2022  | 1º Commit            |
 |   ❗   | 27/11/2022  | Entrega da Modelagem |
 |   ❗   | 28/11/2022  | 2º Commit            |
 |   ❗   | 04/12/2022  | Entrega Final        |
@@ -53,8 +53,6 @@ Se algum membro não esteja presente na apresentação de sua equipe, o mesmo fi
 
 # Entregáveis
 
-Todos os arquivos deverão ficar em um arquivo Zipado (.zip) na pasta raíz do repositório Git, com nome no padrão: `Trabalho Final - BD 2022.2 - Alunos: <nomes>`", onde `<nomes>` indica os nomes dos alunos membros da equipe.
-
 ## Entrega da Modelagem (27/11/2022)
 
 - [ ] Modelagem do BD (.mwb)
@@ -96,6 +94,10 @@ Todos os arquivos deverão ficar em um arquivo Zipado (.zip) na pasta raíz do r
 ### 7. Arquivos Apresentação
 
 - [ ] Documento / arquivo com as apresentações de slides (se desejado)
+
+### 8. Entrega Arquivos por E-mail
+
+- [ ] Além de estarem no repositório .git, os arquvios devem ser entregados em um arquivo Zipado (.zip) por email, com nome no padrão: `Trabalho Final - BD 2022.2 - Alunos: <nomes>`", onde `<nomes>` indica os nomes dos alunos membros da equipe.
 
 ---
 
