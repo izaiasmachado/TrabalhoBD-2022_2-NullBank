@@ -8,8 +8,8 @@
 | :----: | ----------- | -------------------- |
 |   ✅   | 14/11/2022  | Formação das Equipes |
 |   ✅   | 21/11/2022  | 1º Commit            |
-|   ❗   | 27/11/2022  | Entrega da Modelagem |
-|   ❗   | 28/11/2022  | 2º Commit            |
+|   ✅   | 27/11/2022  | Entrega da Modelagem |
+|   ✅   | 28/11/2022  | 2º Commit            |
 |   ❗   | 04/12/2022  | Entrega Final        |
 
 Obs: Marcar com ✅ quando a atividade for feita. Caso ainda não esteja feita, marcar com ❗.
@@ -57,8 +57,8 @@ Todos os arquivos deverão ficar em um arquivo Zipado (.zip) na pasta raíz do r
 
 ## Entrega da Modelagem
 
-- [ ] Modelagem do BD (.mwb)
-- [ ] Scripts de criação e povoamento do BD (.sql)
+- [x] Modelagem do BD (.mwb)
+- [x] Scripts de criação e povoamento do BD (.sql)
 
 ## Entrega Final
 
