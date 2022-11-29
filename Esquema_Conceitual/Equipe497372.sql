@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `Equipe497372`.`Dependente` (
   `nome_dependente` VARCHAR(100) NOT NULL,
   `data_nascimento_dependente` DATE NOT NULL,
   `parentesco` CHAR(1) NOT NULL COMMENT 'Só pode ser \'FILHO(A)\", \"CONJûGE\" ou \"GENITOR\". Podemos adicionar constraints dentro deste atributo para que seja escolhido apenas \"F\", \"C\", ou \"G\"',
-  `idade` INT GENERATED ALWAYS AS () VIRTUAL,
+  `idade` INT,
   `Funcionario_matricula_funcionario` BIGINT(15) NOT NULL,
   PRIMARY KEY (`nome_dependente`, `Funcionario_matricula_funcionario`),
   INDEX `fk_Dependente_Funcionario1_idx` (`Funcionario_matricula_funcionario` ASC) VISIBLE,
@@ -304,8 +304,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Funcionario` (`matricula_funcionario`, `Agencia_idAgencia`, `nome_funcionario`, `senha_funcionario`, `endereco_funcionario`, `cidade_funcionario`, `sexo`, `data_nascimento_funcionario`, `salario_funcionario`, `cargo_funcionario`, `quantidade_dependentes`) VALUES (1234, 123, 'William Lima', '12345', 'Rua Rua', 'Sobral', 'M', '06/10/2002', 2600, 'G', 0);
-INSERT INTO `Equipe497372`.`Funcionario` (`matricula_funcionario`, `Agencia_idAgencia`, `nome_funcionario`, `senha_funcionario`, `endereco_funcionario`, `cidade_funcionario`, `sexo`, `data_nascimento_funcionario`, `salario_funcionario`, `cargo_funcionario`, `quantidade_dependentes`) VALUES (, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, NULL);
+INSERT INTO `Equipe497372`.`Funcionario` (`matricula_funcionario`, `Agencia_idAgencia`, `nome_funcionario`, `senha_funcionario`, `endereco_funcionario`, `cidade_funcionario`, `sexo`, `data_nascimento_funcionario`, `salario_funcionario`, `cargo_funcionario`, `quantidade_dependentes`) VALUES (1234, 123, 'William Lima', '12345', 'Rua Rua', 'Sobral', 'M', '2002-10-06', 2600, 'G', 0);
 
 COMMIT;
 
@@ -325,7 +324,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Dependente` (`nome_dependente`, `data_nascimento_dependente`, `parentesco`, `idade`, `Funcionario_matricula_funcionario`) VALUES ('Carlos Lucas', '08/12/2011', 'F', 11, 1234);
+INSERT INTO `Equipe497372`.`Dependente` (`nome_dependente`, `data_nascimento_dependente`, `parentesco`, `idade`, `Funcionario_matricula_funcionario`) VALUES ('Carlos Lucas', '2011-08-06', 'F', 11, 1234);
 
 COMMIT;
 
@@ -345,7 +344,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Cliente` (`CPF`, `nome_cliente`, `RG_cliente`, `RG_UF`, `RG_orgao_emissor`, `data_nascimento_cliente`, `Endereco_cliente_sequencial_endereco`) VALUES (12345678910, 'Izaias Machado', 456, 'CE', 'SSPCE', '07/07/2002', 1);
+INSERT INTO `Equipe497372`.`Cliente` (`CPF`, `nome_cliente`, `RG_cliente`, `RG_UF`, `RG_orgao_emissor`, `data_nascimento_cliente`, `Endereco_cliente_sequencial_endereco`) VALUES (12345678910, 'Izaias Machado', 456, 'CE', 'SSPCE', '2002-07-07', 1);
 
 COMMIT;
 
@@ -385,7 +384,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Transacoes` (`numero_transacao`, `Contas_numero_conta`, `tipo_transacao`, `data_transacao`, `valor_transacao`) VALUES (1, 123, 'S', '22/11/2022', 2);
+INSERT INTO `Equipe497372`.`Transacoes` (`numero_transacao`, `Contas_numero_conta`, `tipo_transacao`, `data_transacao`, `valor_transacao`) VALUES (1, 123, 'S', '2022-11-22', 2);
 
 COMMIT;
 
@@ -395,7 +394,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Corrente` (`sequencial_corrente`, `Contas_numero_conta`, `data_aniversario_contrato`) VALUES (1, 123, '06/10/2022');
+INSERT INTO `Equipe497372`.`Corrente` (`sequencial_corrente`, `Contas_numero_conta`, `data_aniversario_contrato`) VALUES (1, 123, '2022-10-06');
 
 COMMIT;
 
@@ -415,7 +414,6 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Agencia_Cliente` (`Cliente_CPF`, `Agencia_numero_agencia`, `Contas_numero_conta`) VALUES (12345678910, 123, DEFAULT);
+INSERT INTO `Equipe497372`.`Agencia_Cliente` (`Cliente_CPF`, `Agencia_numero_agencia`, `Contas_numero_conta`) VALUES (12345678910, 123, 123);
 
 COMMIT;
-
