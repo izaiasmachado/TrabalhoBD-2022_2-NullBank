@@ -3,6 +3,7 @@ const router = express.Router();
 
 const AgenciaController = require("./controllers/AgenciaController");
 const FuncionarioController = require("./controllers/FuncionarioController");
+const ClienteController = require("./controllers/ClienteController");
 
 router.get("/agencia", AgenciaController.index);
 router.get("/agencia/:numero_agencia", AgenciaController.show);
@@ -19,6 +20,10 @@ router.delete(
   FuncionarioController.delete
 );
 
-// router.get("/funcionario", (
+router.get("/cliente", ClienteController.index);
+router.get("/cliente/:cpf", ClienteController.show);
+router.post("/cliente", ClienteController.store);
+router.put("/cliente/:cpf", ClienteController.update);
+router.delete("/cliente/:cpf", ClienteController.delete);
 
 module.exports = router;
