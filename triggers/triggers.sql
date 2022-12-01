@@ -79,3 +79,40 @@ BEGIN
 			SET MESSAGE_TEXT = 'check constraint on Contas.tipo_conta failed';
     END IF;
 END;//
+
+------------------------------------------------
+--   TRIGGERS E CONSTRAINTS DE DEPENDENTES    --
+------------------------------------------------
+
+-- Trigger para calcular idade de acordo com a data de nascimento do dependente
+create trigger IdadeCalc before insert on Dependente
+for each row
+begin
+	set new.idade = datediff(now(), new.data_nascimento_dependente) / 365;
+end//
+
+
+------------------------------------------------
+--     TRIGGERS E CONSTRAINTS DE AGÊNCIA      --
+------------------------------------------------
+
+create trigger UpdateSalarioMontante after insert on Funcionario
+for each row
+begin
+	update Agencia set salario_montante_total = salario_montante_total + new.salario_funcionario
+where numer_agencia = Agencia_idAgencia; 
+end//
+
+create trigger UpdateSalarioMontanteAfterUpdate after update on Funcionario
+for each row
+begin
+	update Agencia set salario_montante_total = salario_montante_total + new.salario_funcionario
+where numer_agencia = Agencia_idAgencia; 
+end//
+
+create trigger UpdateSalarioMontanteAfterUpdate after delete on Funcionario
+for each row
+begin
+	update Agencia set salario_montante_total = salario_montante_total - old.salario_funcionario
+where numer_agencia = Agencia_idAgencia; 
+end//

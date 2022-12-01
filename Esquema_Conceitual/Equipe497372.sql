@@ -3,6 +3,8 @@
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
 
+drop database equipe497372;
+
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
@@ -147,9 +149,9 @@ ENGINE = InnoDB;
 -- Table `Equipe497372`.`Email_cliente`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Equipe497372`.`Email_cliente` (
-  `email_ciente` VARCHAR(60) NOT NULL,
+  `email_cliente` VARCHAR(60) NOT NULL,
   `Cliente_CPF` BIGINT(11) NOT NULL,
-  PRIMARY KEY (`email_ciente`, `Cliente_CPF`),
+  PRIMARY KEY (`email_cliente`, `Cliente_CPF`),
   INDEX `fk_Email_cliente_Cliente1_idx` (`Cliente_CPF` ASC) VISIBLE,
   CONSTRAINT `fk_Email_cliente_Cliente1`
     FOREIGN KEY (`Cliente_CPF`)
@@ -364,7 +366,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Email_cliente` (`email_ciente`, `Cliente_CPF`) VALUES ('izaias@izaias.me', 12345678910);
+INSERT INTO `Equipe497372`.`Email_cliente` (`email_cliente`, `Cliente_CPF`) VALUES ('izaias@izaias.me', 12345678910);
 
 COMMIT;
 
