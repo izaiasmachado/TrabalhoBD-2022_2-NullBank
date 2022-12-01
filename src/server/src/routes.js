@@ -14,6 +14,7 @@ router.get("/agencia", AgenciaController.index);
 router.get("/agencia/:numero_agencia", AgenciaController.show);
 router.post("/agencia", AgenciaController.store);
 router.put("/agencia/:numero_agencia", AgenciaController.update);
+router.delete("/agencia/:numero_agencia", AgenciaController.delete);
 
 router.get("/funcionario", FuncionarioController.index);
 router.get("/funcionario/:matricula_funcionario", FuncionarioController.show);

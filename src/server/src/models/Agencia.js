@@ -13,6 +13,11 @@ module.exports = {
       "SELECT * FROM Agencia WHERE numero_agencia = ?",
       [numero_agencia]
     );
+
+    if (agencias.length === 0) {
+      throw new Error("Agência não encontrada");
+    }
+
     const agencia = agencias[0];
     return agencia;
   },
@@ -35,5 +40,12 @@ module.exports = {
     );
 
     return agencia;
+  },
+
+  async delete(numero_agencia) {
+    const connection = await dbc();
+    await connection.execute("DELETE FROM Agencia WHERE numero_agencia = ?", [
+      numero_agencia,
+    ]);
   },
 };
