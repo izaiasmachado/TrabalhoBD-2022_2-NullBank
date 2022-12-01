@@ -55,4 +55,18 @@ module.exports = {
         .json({ code: error.code, message: "Erro ao atualizar agência" });
     }
   },
+
+  async delete(req, res) {
+    const { numero_agencia } = req.params;
+
+    try {
+      await Agencia.find(numero_agencia);
+      await Agencia.delete(numero_agencia);
+      return await res.status(204).json({ message: "Agência deletada" });
+    } catch (error) {
+      return await res
+        .status(400)
+        .json({ code: error.code, message: "Erro ao deletar agência" });
+    }
+  },
 };
