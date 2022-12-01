@@ -1,4 +1,5 @@
 const Funcionario = require("../models/Funcionario");
+const Gerente = require("../models/Gerente");
 
 module.exports = {
   async index(req, res) {
@@ -95,6 +96,21 @@ module.exports = {
       return await res
         .status(400)
         .json({ code: error.code, message: "Erro ao atualizar funcionário" });
+    }
+  },
+
+  async delete(req, res) {
+    const { matricula_funcionario } = req.params;
+
+    try {
+      await Funcionario.find(matricula_funcionario);
+      await Gerente.delete(matricula_funcionario);
+      await Funcionario.delete(matricula_funcionario);
+      return await res.sendStatus(204);
+    } catch (error) {
+      return await res
+        .status(400)
+        .json({ code: error.code, message: "Erro ao deletar funcionário" });
     }
   },
 };

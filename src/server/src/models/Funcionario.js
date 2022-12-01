@@ -1,4 +1,5 @@
 const dbc = require("../services/databaseConnection");
+const Gerente = require("./Gerente");
 
 module.exports = {
   async findAll() {
@@ -42,6 +43,10 @@ module.exports = {
         funcionario.cargo_funcionario,
       ]
     );
+
+    if (funcionario.cargo_funcionario === "G") {
+      await Gerente.create(funcionario.matricula_funcionario);
+    }
   },
 
   async update(funcionario) {
@@ -59,6 +64,14 @@ module.exports = {
         funcionario.cargo_funcionario,
         funcionario.matricula_funcionario,
       ]
+    );
+  },
+
+  async delete(matricula_funcionario) {
+    const connection = await dbc();
+    await connection.execute(
+      "DELETE FROM Funcionario WHERE matricula_funcionario = ?",
+      [matricula_funcionario]
     );
   },
 };

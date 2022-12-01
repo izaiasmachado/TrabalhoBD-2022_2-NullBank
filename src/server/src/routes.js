@@ -19,6 +19,10 @@ router.get("/funcionario", FuncionarioController.index);
 router.get("/funcionario/:matricula_funcionario", FuncionarioController.show);
 router.post("/funcionario", FuncionarioController.store);
 router.put("/funcionario/:matricula_funcionario", FuncionarioController.update);
+router.delete(
+  "/funcionario/:matricula_funcionario",
+  FuncionarioController.delete
+);
 
 // router.get("/funcionario", (
 
