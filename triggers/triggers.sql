@@ -106,11 +106,12 @@ end//
 create trigger UpdateSalarioMontanteAfterUpdate after update on Funcionario
 for each row
 begin
+	update AGencia set salario_montante_total = salario_montante_total - old.salario_funcionario;
 	update Agencia set salario_montante_total = salario_montante_total + new.salario_funcionario
 where numer_agencia = Agencia_idAgencia; 
 end//
 
-create trigger UpdateSalarioMontanteAfterUpdate after delete on Funcionario
+create trigger UpdateSalarioMontanteAfterDelete after delete on Funcionario
 for each row
 begin
 	update Agencia set salario_montante_total = salario_montante_total - old.salario_funcionario
