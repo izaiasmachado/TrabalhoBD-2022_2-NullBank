@@ -92,9 +92,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Equipe497372`.`Endereco_cliente`
+-- Table `Equipe497372`.`Endereco_Cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Equipe497372`.`Endereco_cliente` (
+CREATE TABLE IF NOT EXISTS `Equipe497372`.`Endereco_Cliente` (
   `sequencial_endereco` BIGINT(15) NOT NULL AUTO_INCREMENT,
   `tipo_logradouro` VARCHAR(15) NOT NULL,
   `nome_logradouro` VARCHAR(15) NOT NULL,
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `Equipe497372`.`Cliente` (
   INDEX `fk_Cliente_Endereco_cliente1_idx` (`Endereco_cliente_sequencial_endereco` ASC) VISIBLE,
   CONSTRAINT `fk_Cliente_Endereco_cliente1`
     FOREIGN KEY (`Endereco_cliente_sequencial_endereco`)
-    REFERENCES `Equipe497372`.`Endereco_cliente` (`sequencial_endereco`)
+    REFERENCES `Equipe497372`.`Endereco_Cliente` (`sequencial_endereco`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -332,11 +332,11 @@ COMMIT;
 
 
 -- -----------------------------------------------------
--- Data for table `Equipe497372`.`Endereco_cliente`
+-- Data for table `Equipe497372`.`Endereco_Cliente`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Endereco_cliente` (`sequencial_endereco`, `tipo_logradouro`, `nome_logradouro`, `numero_logradouro`, `bairro`, `cep_logradouro`, `cidade`, `estado`) VALUES (1, 'CASA', 'Rua Menino Deus', 123, 'Centro', '456', 'Sobral', 'CE');
+INSERT INTO `Equipe497372`.`Endereco_Cliente` (`sequencial_endereco`, `tipo_logradouro`, `nome_logradouro`, `numero_logradouro`, `bairro`, `cep_logradouro`, `cidade`, `estado`) VALUES (1, 'CASA', 'Rua Menino Deus', 123, 'Centro', '456', 'Sobral', 'CE');
 
 COMMIT;
 
