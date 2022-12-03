@@ -14,6 +14,10 @@ As documentações para a equipe de desenvolvimento são:
 - [Documentação de Desenvolvimento](./docs/dev/desenvolvimento.md)
 - [Requisitos do Modelo de Negócio](./docs/dev/requisitos-modelo-negocio.md).
 
+Documentos entregáveis:
+
+- [Especificação do Sistema](./docs/entregaveis/especificacoes.md)
+
 ## Equipe
 
 - [Izaias Machado Pessoa Neto](https://github.com/izaiasmachado)
