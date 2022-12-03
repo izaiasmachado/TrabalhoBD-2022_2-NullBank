@@ -1,8 +1,8 @@
 delimiter //;
 
--------------------------------------------
+-- ------------------------------------- --
 -- TRIGGERS E CONSTRAINTS DE FUNCIONÁRIO --
--------------------------------------------
+-- ------------------------------------- --
 
 -- Trigger para a checagem do campo "sexo" de Funcionario
 CREATE TRIGGER SexCheck BEFORE INSERT ON  Funcionario
@@ -15,7 +15,7 @@ BEGIN
 END;//
 
 -- Trigger para a checagem do campo "salario_funcionario" de Funcionario
-CREATE TRIGGER SalarioCheck BEFORE INSERT ON  Funcionario
+CREATE TRIGGER SalarioCheckInsert BEFORE INSERT ON Funcionario
 FOR EACH ROW
 BEGIN
     IF New.salario_funcionario < 2500 THEN
@@ -24,7 +24,7 @@ BEGIN
     END IF;
 END;//
 
-CREATE TRIGGER SalarioCheck BEFORE UPDATE ON  Funcionario
+CREATE TRIGGER SalarioCheckUpdate BEFORE UPDATE ON Funcionario
 FOR EACH ROW
 BEGIN
     IF New.salario_funcionario < 2500 THEN
@@ -34,7 +34,7 @@ BEGIN
 END;//
 
 -- Trigger para a checagem do campo "cargo_funcionario" de Funcionario
-CREATE TRIGGER CargoCheck BEFORE INSERT ON  Funcionario
+CREATE TRIGGER CargoCheckInsert BEFORE INSERT ON  Funcionario
 FOR EACH ROW
 BEGIN
     IF New.cargo_funcionario NOT IN ('G', 'A', 'C') THEN
@@ -43,7 +43,7 @@ BEGIN
     END IF;
 END;//
 
-CREATE TRIGGER CargoCheck BEFORE UPDATE ON  Funcionario
+CREATE TRIGGER CargoCheckUpdate BEFORE UPDATE ON  Funcionario
 FOR EACH ROW
 BEGIN
     IF New.cargo_funcionario NOT IN ('G', 'A', 'C') THEN
@@ -52,9 +52,9 @@ BEGIN
     END IF;
 END;//
 
--------------------------------------------
+-- ------------------------------------- --
 -- TRIGGERS E CONSTRAINTS DE DEPENDENTE  --
--------------------------------------------
+-- ------------------------------------- --
 
 -- Trigger para a checagem do campo "parentesco" de Depdendente
 CREATE TRIGGER ParentescoCheck BEFORE INSERT ON  Dependente
@@ -66,9 +66,9 @@ BEGIN
     END IF;
 END;//
 
--------------------------------------------
+-- ------------------------------------- --
 --   TRIGGERS E CONSTRAINTS DE CONTAS    --
--------------------------------------------
+-- ------------------------------------- --
 
 -- Trigger para a checagem do campo "tipo_conta" de Contas
 CREATE TRIGGER TipoContaCheck BEFORE INSERT ON  Contas
@@ -80,9 +80,9 @@ BEGIN
     END IF;
 END;//
 
-------------------------------------------------
+-- ------------------------------------------ --
 --   TRIGGERS E CONSTRAINTS DE DEPENDENTES    --
-------------------------------------------------
+-- ------------------------------------------ --
 
 -- Trigger para calcular idade de acordo com a data de nascimento do dependente
 create trigger IdadeCalc before insert on Dependente
@@ -92,9 +92,10 @@ begin
 end//
 
 
-------------------------------------------------
+
+-- ------------------------------------------ --
 --     TRIGGERS E CONSTRAINTS DE AGÊNCIA      --
-------------------------------------------------
+-- ------------------------------------------ --
 
 create trigger UpdateSalarioMontante after insert on Funcionario
 for each row
