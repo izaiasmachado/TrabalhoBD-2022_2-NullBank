@@ -16,7 +16,8 @@ As documentações para a equipe de desenvolvimento são:
 
 Documentos entregáveis:
 
-- [Especificação do Sistema](./docs/entregaveis/especificacoes.md)
+- [Especificação do Sistema](./pdfs/especificacoes.pdf)
+- [Manual do Usuário](./pdfs/manual.pdf)
 
 ## Equipe
 
