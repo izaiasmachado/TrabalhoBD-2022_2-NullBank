@@ -3,7 +3,7 @@
 ## Ferramentas para Ambiente de Desenvolvimento
 
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) v8.0.31
-- [Visual Studio Code]() v1.73.1
+- [Visual Studio Code](https://code.visualstudio.com/download) v1.73.1
 - [Insonmia](https://insomnia.rest/download/) v2022.6.0
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) v4.15.0
 
