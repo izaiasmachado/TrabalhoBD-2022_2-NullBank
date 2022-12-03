@@ -70,8 +70,6 @@ module.exports = {
       data_nascimento_cliente,
     };
 
-    console.log(cliente);
-
     try {
       await Cliente.find(CPF);
       await Cliente.update(cliente);

@@ -25,7 +25,7 @@ USE `Equipe497372` ;
 CREATE TABLE IF NOT EXISTS `Equipe497372`.`Agencia` (
   `numero_agencia` BIGINT(15) NOT NULL,
   `nome_agencia` VARCHAR(60) NOT NULL,
-  `salaraio_montante_total` REAL NULL,
+  `salario_montante_total` REAL NULL,
   `cidade_agencia` VARCHAR(60) NULL,
   PRIMARY KEY (`numero_agencia`))
 ENGINE = InnoDB;
@@ -92,9 +92,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Equipe497372`.`Endereco_cliente`
+-- Table `Equipe497372`.`Endereco_Cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Equipe497372`.`Endereco_cliente` (
+CREATE TABLE IF NOT EXISTS `Equipe497372`.`Endereco_Cliente` (
   `sequencial_endereco` BIGINT(15) NOT NULL AUTO_INCREMENT,
   `tipo_logradouro` VARCHAR(15) NOT NULL,
   `nome_logradouro` VARCHAR(15) NOT NULL,
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `Equipe497372`.`Cliente` (
   INDEX `fk_Cliente_Endereco_cliente1_idx` (`Endereco_cliente_sequencial_endereco` ASC) VISIBLE,
   CONSTRAINT `fk_Cliente_Endereco_cliente1`
     FOREIGN KEY (`Endereco_cliente_sequencial_endereco`)
-    REFERENCES `Equipe497372`.`Endereco_cliente` (`sequencial_endereco`)
+    REFERENCES `Equipe497372`.`Endereco_Cliente` (`sequencial_endereco`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -296,7 +296,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Agencia` (`numero_agencia`, `nome_agencia`, `salaraio_montante_total`, `cidade_agencia`) VALUES (123, 'Agência dos bão', 2600, 'Sobral');
+INSERT INTO `Equipe497372`.`Agencia` (`numero_agencia`, `nome_agencia`, `salario_montante_total`, `cidade_agencia`) VALUES (123, 'Agência dos bão', 2600, 'Sobral');
 
 COMMIT;
 
@@ -332,11 +332,11 @@ COMMIT;
 
 
 -- -----------------------------------------------------
--- Data for table `Equipe497372`.`Endereco_cliente`
+-- Data for table `Equipe497372`.`Endereco_Cliente`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Endereco_cliente` (`sequencial_endereco`, `tipo_logradouro`, `nome_logradouro`, `numero_logradouro`, `bairro`, `cep_logradouro`, `cidade`, `estado`) VALUES (1, 'CASA', 'Rua Menino Deus', 123, 'Centro', '456', 'Sobral', 'CE');
+INSERT INTO `Equipe497372`.`Endereco_Cliente` (`sequencial_endereco`, `tipo_logradouro`, `nome_logradouro`, `numero_logradouro`, `bairro`, `cep_logradouro`, `cidade`, `estado`) VALUES (1, 'CASA', 'Rua Menino Deus', 123, 'Centro', '456', 'Sobral', 'CE');
 
 COMMIT;
 
