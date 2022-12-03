@@ -32,6 +32,21 @@ Para iniciar o servidor, execute o seguinte comando:
 npm start
 ```
 
+## Gerar PDFs Entregáveis
+
+Para instalar o gerador de PDFs, execute o seguinte comando:
+
+```bash
+npm i -g md-to-pdf
+```
+
+Para gerar os PDFs dos entregáveis, execute o seguinte comando:
+
+```bash
+cat docs/entregaveis/especificacoes.md | md-to-pdf > pdfs/especificacoes.pdf
+cat docs/entregaveis/manual.md | md-to-pdf > pdfs/manual.pdf
+```
+
 ## Logo
 
 ```html

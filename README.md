@@ -10,9 +10,14 @@
 
 As documentações para a equipe de desenvolvimento são:
 
-- [Documentação das Atividades](./docs/atividades.md)
-- [Documentação de Desenvolvimento](./docs/desenvolvimento.md)
-- [Requisitos do Modelo de Negócio](./docs/requisitos-modelo-negocio.md).
+- [Documentação das Atividades](./docs/dev/atividades.md)
+- [Documentação de Desenvolvimento](./docs/dev/desenvolvimento.md)
+- [Requisitos do Modelo de Negócio](./docs/dev/requisitos-modelo-negocio.md).
+
+Documentos entregáveis:
+
+- [Especificação do Sistema](./pdfs/especificacoes.pdf)
+- [Manual do Usuário](./pdfs/manual.pdf)
 
 ## Equipe
 
