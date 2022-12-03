@@ -2,6 +2,36 @@
 
 Esse arquivo está aqui para armazenar informações úteis para o desenvolvimento do projeto. Ele não é obrigatório para o uso do projeto, mas pode ser útil para contribuir com o projeto.
 
+## Instruções Iniciar MySQL
+
+Para iniciar o MySQL, execute o seguinte comando:
+
+```bash
+docker-compose up -d
+```
+
+Caso seja necessário parar o MySQL, execute o seguinte comando:
+
+```bash
+docker-compose down
+```
+
+## Instruções Iniciar o Servidor
+
+Para instalar o backend da aplicação, execute o seguinte comando:
+
+```bash
+cd src/server
+npm install
+co .env.example .env
+```
+
+Para iniciar o servidor, execute o seguinte comando:
+
+```bash
+npm start
+```
+
 ## Logo
 
 ```html
