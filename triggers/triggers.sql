@@ -91,8 +91,6 @@ begin
 	set new.idade = datediff(now(), new.data_nascimento_dependente) / 365;
 end//
 
-
-
 -- ------------------------------------------ --
 --     TRIGGERS E CONSTRAINTS DE AGÊNCIA      --
 -- ------------------------------------------ --
@@ -101,20 +99,20 @@ create trigger UpdateSalarioMontante after insert on Funcionario
 for each row
 begin
 	update Agencia set salario_montante_total = salario_montante_total + new.salario_funcionario
-where numer_agencia = Agencia_idAgencia; 
+where numero_agencia = new.Agencia_idAgencia; 
 end//
 
 create trigger UpdateSalarioMontanteAfterUpdate after update on Funcionario
 for each row
 begin
-	update AGencia set salario_montante_total = salario_montante_total - old.salario_funcionario;
+	update Agencia set salario_montante_total = salario_montante_total - old.salario_funcionario;
 	update Agencia set salario_montante_total = salario_montante_total + new.salario_funcionario
-where numer_agencia = Agencia_idAgencia; 
+where numero_agencia = new.Agencia_idAgencia; 
 end//
 
 create trigger UpdateSalarioMontanteAfterDelete after delete on Funcionario
 for each row
 begin
 	update Agencia set salario_montante_total = salario_montante_total - old.salario_funcionario
-where numer_agencia = Agencia_idAgencia; 
+where numero_agencia = old.Agencia_idAgencia; 
 end//

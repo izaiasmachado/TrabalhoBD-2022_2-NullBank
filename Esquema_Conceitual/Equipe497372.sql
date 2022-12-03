@@ -25,7 +25,7 @@ USE `Equipe497372` ;
 CREATE TABLE IF NOT EXISTS `Equipe497372`.`Agencia` (
   `numero_agencia` BIGINT(15) NOT NULL,
   `nome_agencia` VARCHAR(60) NOT NULL,
-  `salaraio_montante_total` REAL NULL,
+  `salario_montante_total` REAL NULL,
   `cidade_agencia` VARCHAR(60) NULL,
   PRIMARY KEY (`numero_agencia`))
 ENGINE = InnoDB;
@@ -296,7 +296,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `Equipe497372`;
-INSERT INTO `Equipe497372`.`Agencia` (`numero_agencia`, `nome_agencia`, `salaraio_montante_total`, `cidade_agencia`) VALUES (123, 'Agência dos bão', 2600, 'Sobral');
+INSERT INTO `Equipe497372`.`Agencia` (`numero_agencia`, `nome_agencia`, `salario_montante_total`, `cidade_agencia`) VALUES (123, 'Agência dos bão', 2600, 'Sobral');
 
 COMMIT;
 
