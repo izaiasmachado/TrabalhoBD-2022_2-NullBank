@@ -10,7 +10,7 @@
 |   ✅   | 21/11/2022  | 1º Commit            |
 |   ✅   | 27/11/2022  | Entrega da Modelagem |
 |   ✅   | 28/11/2022  | 2º Commit            |
-|   ❗   | 04/12/2022  | Entrega Final        |
+|   ✅   | 04/12/2022  | Entrega Final        |
 
 Obs: Marcar com ✅ quando a atividade for feita. Caso ainda não esteja feita, marcar com ❗.
 
@@ -64,11 +64,11 @@ Todos os arquivos deverão ficar em um arquivo Zipado (.zip) na pasta raíz do r
 
 ### 1. Código-fonte
 
-- [ ] Código-fonte da aplicação (comentado e indentado)
+- [x] Código-fonte da aplicação (comentado e indentado)
 
 ### 2. Código executável
 
-- [ ] Código executável para plataforma / sistema MS Windows 10 (.exe)
+- [x] Código executável para plataforma / sistema MS Windows 10 (.exe)
 
 ### 3. Modelagem do BD
 
@@ -95,11 +95,11 @@ Todos os arquivos deverão ficar em um arquivo Zipado (.zip) na pasta raíz do r
 
 ### 7. Arquivos Apresentação
 
-- [ ] Documento / arquivo com as apresentações de slides (se desejado)
+- [x] Documento / arquivo com as apresentações de slides (se desejado)
 
 ### 8. Entrega Arquivos por E-mail
 
-- [ ] Além de estarem no repositório .git, os arquvios devem ser entregados em um arquivo Zipado (.zip) por email, com nome no padrão: `Trabalho Final - BD 2022.2 - Alunos: <nomes>`", onde `<nomes>` indica os nomes dos alunos membros da equipe.
+- [x] Além de estarem no repositório .git, os arquvios devem ser entregados em um arquivo Zipado (.zip) por email, com nome no padrão: `Trabalho Final - BD 2022.2 - Alunos: <nomes>`", onde `<nomes>` indica os nomes dos alunos membros da equipe.
 
 ---
 
