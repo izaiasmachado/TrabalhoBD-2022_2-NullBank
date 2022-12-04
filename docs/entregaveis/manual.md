@@ -107,19 +107,7 @@ Abra um novo terminal e navegue até a raíz do projeto. Em seguida, navegue par
 cd src/client
 ```
 
-Instale as dependências do frontend e crie o arquivo de configuração
-
-```bash
-npm install
-```
-
-Com isso, o frontend pode ser iniciado com o comando
-
-```bash
-npm start
-```
-
-O frontend deve ficar acessível em `http://localhost:3000`.
+Abra o arquivo `index.html` no seu navegador de preferência.
 
 ## Encerrar Execuções
 

@@ -16,4 +16,5 @@
 
 ## Ferramentas para Ambiente de Execução do Front-end
 
-- [React](https://pt-br.reactjs.org/) v18.2.0
+- [Bootstrap](https://getbootstrap.com/) v5.2
+- [Axios](https://axios-http.com/ptbr/) v1.2.0
