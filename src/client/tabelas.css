@@ -1,0 +1,63 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: 600; */
+    font-size: 1.2em;
+}
+
+body{
+    background-color: #ececec;
+}
+
+.tabela table{
+    margin-top: 6vh;
+    font-size: 0.5em;
+    
+}
+
+.tabela{
+    border-radius: 5em;
+    margin: 1em;
+    margin-top: -2em;
+}
+
+.dropdown{
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+.linha{
+    color: #2d1a64;
+    font-size: 1.3em;
+}
+h2{
+    margin: 1em;
+    color: #2d1a64;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botaoCliente{
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 90.5vw;
+    /* position: absolute; */
+    background-color: #2d1a64;
+    border: none;
+    font-size: 0.8em;
+    margin-top: -5em;
+}
+
+.input-modal{
+    font-size: 0.5em;
+    width: 30vw;
+    border: none;
+    outline: none;
+    border-bottom: #2d1a64 solid 2px;
+    margin-bottom: 1em;
+    padding: 0.3em;
+    color: #2d1a64;
+}
+
+
+.pModal p{
+    font-size: 0.4em;
+    font-weight: 600;
+}
