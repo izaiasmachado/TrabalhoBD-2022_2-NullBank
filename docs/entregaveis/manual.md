@@ -101,13 +101,13 @@ A API deve ficar acessível em `http://localhost:5001`. Caso queira mudar a port
 
 ## Iniciar o Cliente
 
-Abra um novo terminal e navegue até a raíz do projeto. Em seguida, navegue para a pasta do frontend
+Abra o arquivo `index.html` disponível raíz do projeto. Você pode utilizar qualquer browser para isso.
 
-```bash
-cd src/client
-```
+Isso só pode ser realizado após subir a API. No arquivo `script.js`, a variável global `link` deve conter a URL da API. Caso a API esteja rodando na porta 5001, a variável deve ser `http://localhost:5001`.
 
-Abra o arquivo `index.html` no seu navegador de preferência.
+A primeira tela é a tela de credenciais do banco de dados. O usuário é 'admin' e a senha é 'root'. Essas informações podem ser alteradas no arquivo `src/client/login.js`.
+
+Após isso, você será redirecionado para uma tela com a opção de login como DBA ou Funcionário. Se você escolher DBA, o usuário é 'Admin' e a senha é 'Root. No caso do funcionário, o usuário é 'qwerty' e a senha é '12345'. Esses são os níveis de acesso disponíveis no sistema.
 
 ## Encerrar Execuções
 
