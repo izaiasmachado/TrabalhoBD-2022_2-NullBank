@@ -1,4 +1,4 @@
-const link = "http://dcb6-177-37-198-145.ngrok.io/api/";
+const link = "http://localhost:5001/api/";
 
 function limparClientes() {
   let table = document.getElementById("tabela");
@@ -253,9 +253,6 @@ const postFuncionario = async () => {
     "salario_funcionario"
   ).value;
   const cargo_funcionario = document.getElementById("cargo_funcionario").value;
-  const quantidade_dependentes = document.getElementById(
-    "quantidade_dependentes"
-  ).value;
 
   const newPost = {
     matricula_funcionario: matricula_funcionario,
@@ -268,7 +265,6 @@ const postFuncionario = async () => {
     data_nascimento_funcionario: data_nascimento_funcionario,
     salario_funcionario: salario_funcionario,
     cargo_funcionario: cargo_funcionario,
-    quantidade_dependentes: quantidade_dependentes,
   };
 
   console.log(newPost);

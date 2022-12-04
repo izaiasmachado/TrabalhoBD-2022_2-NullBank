@@ -25,7 +25,7 @@ module.exports = {
   async create(agencia) {
     const connection = await dbc();
     await connection.execute(
-      "INSERT INTO Agencia (numero_agencia, nome_agencia, cidade_agencia) VALUES (?, ?, ?)",
+      "INSERT INTO Agencia (numero_agencia, nome_agencia, cidade_agencia, salario_montante_total) VALUES (?, ?, ?, 0)",
       [agencia.numero_agencia, agencia.nome_agencia, agencia.cidade_agencia]
     );
 
