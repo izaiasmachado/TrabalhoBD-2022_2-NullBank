@@ -34,6 +34,7 @@ As tecnologias utilizadas no desenvolvimento desse projeto estão listadas, junt
 - [Modelo do BD (pdf)](./pdfs/modelagem.pdf)
 - [Documento de Especificações](./pdfs/especificacoes.pdf)
 - [Manual do Usuário](./pdfs/manual.pdf)
+- [Apresentação de Slides](./pdfs/apresentacao.pdf)
 
 As informações sobre os demais entregáveis do projeto e também o funcionamento da aplicação estão disponíveis no manual do usuário.
 
