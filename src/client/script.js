@@ -1,4 +1,4 @@
-const link = "http://dcb6-177-37-198-145.ngrok.io/api/";
+const link = "http://localhost:5001/api/";
 
 function limparClientes() {
   let table = document.getElementById("tabela");
