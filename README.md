@@ -30,8 +30,12 @@ As tecnologias utilizadas no desenvolvimento desse projeto estão listadas, junt
 
 ### Entregáveis
 
-- [Especificação do Sistema](./pdfs/especificacoes.pdf)
+- [Modelo do BD (.mwb)](./pdfs/modelagem.pdf)
+- [Modelo do BD (pdf)](./pdfs/modelagem.pdf)
+- [Documento de Especificações](./pdfs/especificacoes.pdf)
 - [Manual do Usuário](./pdfs/manual.pdf)
+
+As informações sobre os demais entregáveis do projeto e também o funcionamento da aplicação estão disponíveis no manual do usuário.
 
 ### Equipe de Desenvolvimento
 

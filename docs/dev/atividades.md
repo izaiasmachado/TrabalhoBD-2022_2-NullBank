@@ -72,15 +72,15 @@ Todos os arquivos deverão ficar em um arquivo Zipado (.zip) na pasta raíz do r
 
 ### 3. Modelagem do BD
 
-- [ ] Modelagem do BD (.mwb)
+- [x] Modelagem do BD (.mwb)
 
 ### 4. Scripts SQL
 
-- [ ] Scripts de criação e povoamento do BD (.sql) (atualizados\*)
+- [x] Scripts de criação e povoamento do BD (.sql) (atualizados\*)
 
 ### 5. Documento de Especificações
 
-- [ ] Documento com especificação de nome, versão e link para download das ferramentas utilizadas no projeto.
+- [x] Documento com especificação de nome, versão e link para download das ferramentas utilizadas no projeto.
   - Linguagem de Programação
   - Ambiente de Desenvolvimento
   - Drive do MySQL
@@ -89,7 +89,7 @@ Todos os arquivos deverão ficar em um arquivo Zipado (.zip) na pasta raíz do r
 
 ### 6. Manual do Usuário
 
-- [ ] Documento contendo manual de utilização do sistema (Manual do Usuário)
+- [x] Documento contendo manual de utilização do sistema (Manual do Usuário)
 
 (\*) Todas as alterações feitas na versão originalmente entregue deverão estar devidamente comentadas no script (linhas iniciando por: `-- `.
 
